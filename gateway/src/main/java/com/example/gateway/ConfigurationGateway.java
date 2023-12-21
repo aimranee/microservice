@@ -10,17 +10,9 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 
 @Configuration
 public class ConfigurationGateway {
-//    @Bean
-//    RouteLocator routes(RouteLocatorBuilder builder) {
-//        return builder.routes()
-//                .route(r -> r.path("/clients/**").uri("lb://SERVICE-CLIENT"))
-//                .build();
-//    }
-
     @Bean
     DiscoveryClientRouteDefinitionLocator routesDynamique(ReactiveDiscoveryClient rdc, DiscoveryLocatorProperties dlp){
         return new DiscoveryClientRouteDefinitionLocator(rdc, dlp);
     }
-
 
 }
