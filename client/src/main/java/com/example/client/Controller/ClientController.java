@@ -21,7 +21,6 @@ public class ClientController {
 
     @GetMapping("/client/{id}")
     public Client chercherUnClients(@PathVariable Long id) throws Exception {
-
         return this.clientRepository.findById(id).orElseThrow(() -> new Exception("Client inexistnt"));
     }
 }

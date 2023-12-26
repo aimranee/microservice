@@ -16,8 +16,6 @@ public class Client {
     @Id
     @GeneratedValue
     private Long id;
-
     private String nom;
-
     private Float age;
 }
